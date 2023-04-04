@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-angular-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-angular-grids/styles/material.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// @font-face {
+//     font-family: "Exo";
+//     src: local("Exo_2"),
+//       url(./assets/fonts/Exo_2/static/Exo2-Bold.ttf) format("truetype");
+//   }
+  
+//   @font-face {
+//     font-family: "JosefinRegular";
+//     src: local("Josefin_Sans"),
+//       url(./assets/fonts/Josefin_Sans/static/JosefinSans-Regular.ttf)
+//         format("truetype");
+//   }
+  
+//   @font-face {
+//     font-family: "JosefinBold";
+//     src: local("Josefin_Sans"),
+//       url(./assets/fonts/Josefin_Sans/static/JosefinSans-Bold.ttf)
+//         format("truetype");
+//   }
+  
+//   @font-face {
+//     font-family: "KanitMedium";
+//     src: local("Kanit"),
+//       url(./assets/fonts/Kanit/Kanit-Medium.ttf) format("truetype");
+//   }
+  
+//   @font-face {
+//     font-family: "KanitBold";
+//     src: local("Kanit"),
+//       url(./assets/fonts/Kanit/Kanit-Bold.ttf) format("truetype");
+//   }
+  
+//   @font-face {
+//     font-family: "UbuntuRegular";
+//     src: local("Kanit"),
+//       url(./assets/fonts/Ubuntu/Ubuntu-Regular.ttf) format("truetype");
+//   }
+  
+//   @font-face {
+//     font-family: "UbuntuMedium";
+//     src: local("Kanit"),
+//       url(./assets/fonts/Ubuntu/Ubuntu-Medium.ttf) format("truetype");
+//   }
+  
+//   @font-face {
+//     font-family: "UbuntuBold";
+//     src: local("Kanit"),
+//       url(./assets/fonts/Ubuntu/Ubuntu-Bold.ttf) format("truetype");
+//   }
+
+  .ngx-spinner-overlay {
+    height: 100vh !important;
+  }

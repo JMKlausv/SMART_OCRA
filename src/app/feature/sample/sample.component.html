@@ -1,0 +1,80 @@
+<!-- <p>sample works!</p>
+<button
+(click)="onCancel()"
+>click</button>
+<button
+(click)="onSubmit()"
+>submit</button> -->
+<ngx-spinner *ngIf="isSending" type="ball-scale-multiple"></ngx-spinner>
+<div [ngClass]="!isModal ? 'card mt-4' : null">
+  <div class="card-content p-3">
+    <app-form-header title="Port Information"></app-form-header>
+    <form [formGroup]="dataForm">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <label class="mb-2 mt-2 label">Port Number</label>
+          <ejs-textbox
+            cssClass="e-outline"
+            formControlName="portNumber"
+            id="portNumber"
+          ></ejs-textbox>
+          <app-common-error-display
+            *ngIf="formSubmitted"
+            [error]="dataForm.get('portNumber')"
+          >
+          </app-common-error-display>
+        </div>
+        <div>{{getControl("country").value}}</div>
+        <div class="col-12 col-md-6 col-lg-4 mt-2">
+          <label class="mb-2 label">Country</label>
+          <ejs-dropdownlist
+            cssClass="e-outline"
+            id="vountry"
+            allowFiltering="true"
+            [dataSource]="data"
+            [fields]="fields"
+            formControlName="country"
+          ></ejs-dropdownlist>
+          <app-common-error-display
+            *ngIf="formSubmitted"
+            [error]="dataForm.get('country')"
+          >
+          </app-common-error-display>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mt-2">
+          <label class="mb-2 label" id="vegion">Region</label>
+          <ejs-dropdownlist
+            cssClass="e-outline"
+            [dataSource]="this.crudService.dropDownData['region']"
+            formControlName="region"
+            [fields]="Regionfields"
+            id="region"
+            formControlName="region"
+          ></ejs-dropdownlist>
+          <app-common-error-display
+            *ngIf="formSubmitted"
+            [error]="dataForm.get('region')"
+          >
+          </app-common-error-display>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mt-2">
+          <label class="mb-2 label" id="vollume">Volume</label>
+          <ejs-textbox
+            cssClass="e-outline"
+            formControlName="vollume"
+          ></ejs-textbox>
+          <app-common-error-display
+            *ngIf="formSubmitted"
+            [error]="dataForm.get('vollume')"
+          >
+          </app-common-error-display>
+        </div>
+      </div>
+      <app-form-buttons
+        [isModal]="isModal ? true : false"
+        (submit)="onSubmit()"
+        (cancel)="onCancel()"
+      ></app-form-buttons>
+    </form>
+  </div>
+</div>

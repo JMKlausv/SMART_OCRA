@@ -1,0 +1,24 @@
+<div class="d-flex justify-between" *ngIf="data !== null">
+    <div>
+      <div *ngIf="data" class="header-left">
+        <span class="title-left mr-4 text-[#5f5f5f]"
+          >{{ data?.formTitle | titlecase }}
+        </span>
+      </div>
+    </div>
+  
+    <div *ngIf="data?.title !== 'Dashboard'" class="hidden md:inline-flex">
+      <div *ngIf="data" class="header">
+        <span class="title mr-4 text-[#5f5f5f]">{{
+          data?.title | titlecase
+        }}</span>
+        <span>
+          <i class="fa fa-chevron-circle-right mr-4 text-[#7986CB]"></i>
+        </span>
+        <span class="breadCrumb text-[#5f5f5f]">{{
+          data?.breadCrumb | titlecase
+        }}</span>
+      </div>
+    </div>
+  </div>
+  
